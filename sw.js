@@ -1,4 +1,4 @@
-/* console.log('SW registered again!');
+console.log('SW registered again!');
  const cacheCurrent = 'rest-v1';
 
 //items to be cached
@@ -21,20 +21,24 @@ const cacheFiles = [
   '/img/9.jpg',
   '/img/10.jpg',
   '/css/styles.css'
-]
+];
+
 //add files to cache on install
 self.addEventListener('install', function(event) {
 
 event.waitUntil(
   caches.open('cacheCurrent').then(function(cache) {
-    console.log('opened cache');
+    console.log(cache);
     return cache.addAll(cacheFiles);
+
+  }).catch(error => {
+    console.log(error);
   })
 );
 });
 
 //check if files are in the cache and fetch them if not.
-/*self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function(event) {
   console.log('fetching...');
   event.respondWith(
     caches.match(event.request).then(function(response) {
@@ -57,7 +61,7 @@ event.waitUntil(
 }
 }));
 });
-*/
+
 /*
 self.addEventListener('fetch', function (event) {
   event.respondWith(

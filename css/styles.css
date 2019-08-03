@@ -367,7 +367,7 @@ header .nav {
 
 .inside #restaurant-container {
 	order:3;
-	width: 100%;
+	width: 100vw;
 	text-align: center;
 	margin: auto;
 	position: relative;
@@ -376,7 +376,7 @@ header .nav {
 
 .inside #reviews-container {
 	order:4;
-	width: 100%;
+	width: 100vw;
 }
 
 }

@@ -1,4 +1,4 @@
- console.log('SW registered again!');
+/* console.log('SW registered again!');
  const cacheCurrent = 'rest-v1';
 
 //items to be cached
@@ -58,7 +58,7 @@ event.waitUntil(
 }));
 });
 */
-
+/*
 self.addEventListener('fetch', function (event) {
   event.respondWith(
     caches.match(event.request).then(function (response) {
@@ -66,3 +66,4 @@ self.addEventListener('fetch', function (event) {
     })
   );
 });
+*/
